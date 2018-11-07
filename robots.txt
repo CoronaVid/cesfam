@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://designer.alectrico.cl/sitemap.xml

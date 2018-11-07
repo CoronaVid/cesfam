@@ -80,12 +80,12 @@
 
     <script id="amp-access" type="application/json">
     {
-    "authorization": "https://shop-staging.alectrico.cl/amp/accesos/autorizacion/?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
-    "pingback": "https://shop-staging.alectrico.cl/amp/accesos/pingback?rid=READER_ID&amp=true&clientId=CLIENT_ID(uid)&url=SOURCE_URL", 
+    "authorization": "https://backend.alectrico.cl/amp/accesos/autorizacion/?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
+    "pingback": "https://backend.alectrico.cl/amp/accesos/pingback?rid=READER_ID&amp=true&clientId=CLIENT_ID(uid)&url=SOURCE_URL", 
     "login": {
-    "sign-in": "https://shop-staging.alectrico.cl/users/sign_in/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-    "sign-out": "https://shop-staging.alectrico.cl/amp/accesos/logout?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-    "sign-up":  "https://shop-staging.alectrico.cl/users/sign_up/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
+    "sign-in": "https://backend.alectrico.cl/users/sign_in/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+    "sign-out": "https://backend.alectrico.cl/amp/accesos/logout?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+    "sign-up":  "https://backend.alectrico.cl/users/sign_up/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
     },
     "authorizationFallbackResponse": {
       "error": true,
@@ -788,7 +788,7 @@
     <!--
     <amp-state
        id = "remoto"
-       src="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/cart.json?clientId=CLIENT_ID(uid)&_=RANDOM">
+       src="https://backend.alectrico.cl/api/v1/electrico/circuitos/cart.json?clientId=CLIENT_ID(uid)&_=RANDOM">
      </amp-state>
     -->
     <amp-sidebar id="drawermenu" layout="nodisplay">
@@ -1683,7 +1683,7 @@
 			  role="button"
 			  tabindex="0" >
 			  <form method   = "POST"
-			    action-xhr = "https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/deleteElectrodomestico.json"
+			    action-xhr = "https://backend.alectrico.cl/api/v1/electrico/circuitos/deleteElectrodomestico.json"
 			      target    = "_top"
 			      on = "submit-success:carrusel-list.refresh,cart-list.refresh">
 			     <input name = "clientId" 
@@ -1725,7 +1725,7 @@
 		      </button>
 
 		      <form method   = "POST"
-			action-xhr = "https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/deleteElectrodomestico.json"
+			action-xhr = "https://backend.alectrico.cl/api/v1/electrico/circuitos/deleteElectrodomestico.json"
 			  target    = "_top"
 			  on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
 			 <input name = "clientId" 
@@ -2010,7 +2010,7 @@
 	      -->
 	      <form id="order"
 		method="POST"
-		action-xhr="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/addToCircuito.json"
+		action-xhr="https://backend.alectrico.cl/api/v1/electrico/circuitos/addToCircuito.json"
 		target="_top"
 		on="submit-success:AMP.setState({ presupuesto: { Iniciado: (presupuesto.Iniciado + 1)}}),carrusel-list.refresh, cart-list-dueno.refresh,cart-list.refresh,ocupacion-list.refresh"
 		class="flex flex-wrap m1">
@@ -2276,7 +2276,7 @@
 	    items = "."
 	    single-item
 	    layout="fixed-height"
-	    src="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/get/?clientId=CLIENT_ID(uid)&_=RANDOM"
+	    src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get/?clientId=CLIENT_ID(uid)&_=RANDOM"
 	    id="carrusel-list">
 	    <div>
             </div>
@@ -2317,7 +2317,7 @@
 
 		<form method   = "POST"
 		   class = "close-gallery-button"
-		    action-xhr = "https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
+		    action-xhr = "https://backend.alectrico.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
 		    target    = "_top"
 		    on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
 		   <input name = "clientId" 
@@ -2336,7 +2336,7 @@
 		<!---
 		<form method   = "POST"
 		    class = "close-gallery-button"
-		    action-xhr = "https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
+		    action-xhr = "https://backend.alectrico.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
 		    target    = "_top"
 		    on = "submit-success:carrusel-list.refresh">
 		   <input name = "clientId" 
@@ -2352,7 +2352,7 @@
             {{/items}}
 	    <!--
             <form method   = "POST"
-              action-xhr = "https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
+              action-xhr = "https://backend.alectrico.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
               target    = "_top"
               on = "submit-success:carrusel-list.refresh,cart-list.refresh">
               <input name = "clientId" 
@@ -2462,7 +2462,7 @@
 	   {{#presupuesto_remoto}}
              <form id="sync"
                 method="POST"
-                action-xhr="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/syncFromRemote.json"
+                action-xhr="https://backend.alectrico.cl/api/v1/electrico/circuitos/syncFromRemote.json"
                 target="_top"
 		on="submit-success:AMP.setState({inicial: { invisible: true}, presupuesto: { Iniciado: (presupuesto.Iniciado + 1)}}),carrusel-list.refresh,cart-list.refresh"
                 class="flex flex-wrap m1">
@@ -2516,7 +2516,7 @@
 		  items="."
 		  single-item
 		  layout="fixed-height"
-		  src="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/get.json?clientId=CLIENT_ID(uid)&_=RANDOM"
+		  src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get.json?clientId=CLIENT_ID(uid)&_=RANDOM"
 		  id="cart-list">
 		  <div overflow = "" class = "list-overflow">VER MÁS</div>
 		</amp-list>
@@ -2555,7 +2555,7 @@
 	 height = "180"
 	 width = "auto"
 	 layout = "fixed-height"
-         src="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/cart.json?clientId=CLIENT_ID(uid)&_=RANDOM"
+         src="https://backend.alectrico.cl/api/v1/electrico/circuitos/cart.json?clientId=CLIENT_ID(uid)&_=RANDOM"
 	 >
         <div overflow = "" class = "list-overflow">VER MÁS</div>
 	</amp-list>
@@ -2614,7 +2614,7 @@
 	    items       = "."
 	    single-item
 	    layout      = "fixed-height"
-	    src         = "https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/ocupacion.json?clientId=CLIENT_ID(uid)&_=RANDOM"
+	    src         = "https://backend.alectrico.cl/api/v1/electrico/circuitos/ocupacion.json?clientId=CLIENT_ID(uid)&_=RANDOM"
 	    id          = "ocupacion-list">
 	    <div overflow = "" class = "list-overflow">VER MÁS</div>
 	  </amp-list>
@@ -2647,7 +2647,7 @@
                           [hidden] = "{{seguro}}"
                           layout="fixed"
                           width="15" height="15"
-                          src="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/atencion.json" >
+                          src="https://backend.alectrico.cl/api/v1/electrico/circuitos/atencion.json" >
                         </amp-bodymovin-animation>
 			<strong>{{tipo_circuito.capacidad}} Amperes </strong>
 			<progress 
@@ -2672,7 +2672,7 @@
                       [hidden] = "{{seguro}}"
                       layout="fixed"
                       width="10" height="10"
-                      src="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/atencion.json" >
+                      src="https://backend.alectrico.cl/api/v1/electrico/circuitos/atencion.json" >
                     </amp-bodymovin-animation>
 
 		     <div>
@@ -2701,7 +2701,7 @@
 	  items="."
 	  single-item
 	  layout="fixed-height"
-	  src="https://shop-staging.alectrico.cl/api/v1/electrico/circuitos/get.json?clientId=CLIENT_ID(uid)&_=RANDOM"
+	  src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get.json?clientId=CLIENT_ID(uid)&_=RANDOM"
 	  id="cart-list">
           <div overflow = "" class = "list-overflow">VER MÁS</div>
         </amp-list>
@@ -3009,7 +3009,7 @@
 	      </amp-selector>
 	    </span>
 
-	    <form [hidden]='contactoSelected' action-xhr='https://shop-staging.alectrico.cl/amp/accesos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr='https://shop-staging.alectrico.cl/amp/accesos/verify'>
+	    <form [hidden]='contactoSelected' action-xhr='https://backend.alectrico.cl/amp/accesos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/amp/accesos/verify'>
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
 	      <p>Ingrese sus datos de contacto</p>
 	      <div class='px2 mt4 md-mt3'>
@@ -3085,7 +3085,7 @@
 	<!-- -->
 	<section [hidden]='currentStep !=1' hidden=''>
 	  <div class='content'>
-	    <form action-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({problemaSelected: true})' target='_top' verify-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/verify'>
+	    <form action-xhr='https://backend.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({problemaSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/amp/presupuestos/verify'>
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
 	      <input name='etapa' type='hidden' value='problema'>
 	      <div class='px2 mt4 md-mt3'>
@@ -3133,7 +3133,7 @@
 	<!-- -->
 	<section [hidden]='currentStep != 2' hidden=''>
 	  <div class='content'>
-	    <form action-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-first-on-submit' id='tipo_trabajo' method='post' on='submit-success:AMP.setState({tipo_trabajoSelected: true})' target='_top' verify-xhr='https://shop-staging.alectrico.cl/amp/accesos/verify'>
+	    <form action-xhr='https://backend.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-first-on-submit' id='tipo_trabajo' method='post' on='submit-success:AMP.setState({tipo_trabajoSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/amp/accesos/verify'>
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
 	      <input name='etapa' type='hidden' value='tipo_trabajo'>
 	      <div class='ampstart-input inline-block relative m0 p0 mb3'>
@@ -3171,7 +3171,7 @@
 	<!-- -->
 	<section [hidden]='currentStep !=3' hidden=''>
 	  <div class='content'>
-	    <form action-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({direccionSelected: true})' target='_top' verify-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/verify'>
+	    <form action-xhr='https://backend.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({direccionSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/amp/presupuestos/verify'>
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
 	      <input name='etapa' type='hidden' value='direccion'>
 	      <div class='px2 mt4 md-mt3'>
@@ -3219,7 +3219,7 @@
 	  </div>
 	</section>
 	<!--- -->
-	<form action-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' id='data' method='post' on='submit-success:AMP.setState({problemaSelected: true})' target='_top' verify-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/verify'>
+	<form action-xhr='https://backend.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' id='data' method='post' on='submit-success:AMP.setState({problemaSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/amp/presupuestos/verify'>
 	  <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
 	  <input name='etapa' type='hidden' value='visita'>
 	</form>
@@ -3320,7 +3320,7 @@
 	<!-- -->
 	<section [hidden]='currentStep != 10' hidden=''>
 	  <div class='content'>
-	    <form action-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({rolSelected: true})' target='_top' verify-xhr='https://shop-staging.alectrico.cl/amp/presupuestos/verify'>
+	    <form action-xhr='https://backend.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({rolSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/amp/presupuestos/verify'>
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
 	      <input name='etapa' type='hidden' value='rol'>
 	      <div class='px2 mt4 md-mt3'>

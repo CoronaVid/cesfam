@@ -80,11 +80,12 @@
 
     <script id="amp-access" type="application/json">
     {
-    "authorization": "https://designerbackend.herokuapp.com/authenticate.json/?email='loco@alectrico.cl'&password='123123123'&rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
+    "authorization": "https://designerbackend.herokuapp.com/authenticate.json?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
     "authorization_amp": "https://backend.alectrico.cl/amp/accesos/autorizacion/?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
     "pingback": "https://backend.alectrico.cl/amp/accesos/pingback?rid=READER_ID&amp=true&clientId=CLIENT_ID(uid)&url=SOURCE_URL", 
     "login": {
-    "sign-in": "https://backend.alectrico.cl/users/sign_in/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+    "sign-in-with-cookies": "https://backend.alectrico.cl/users/sign_in/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+    "sign-in": "https://designerbackend.herokuapp.com/authenticate.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-out": "https://backend.alectrico.cl/amp/accesos/logout?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-up":  "https://backend.alectrico.cl/users/sign_up/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
     },

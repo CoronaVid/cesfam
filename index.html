@@ -83,6 +83,7 @@
     "authorization": "https://designerbackend.herokuapp.com/authenticate.json?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
     "noPingback": true,
     "login": {
+    "create-token":"https://designerbackend.herokuapp.com/create_token.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-in": "https://designerbackend.herokuapp.com/sign_in.json/?rid=READER_ID&email=123@alectrico.cl&password=123123123&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-out": "https://designerbackend.herokuapp.com/logout.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-up":  "https://designerbackend.herokuapp.com/sign_up.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
@@ -2932,7 +2933,7 @@
 	-->
 
         <button amp-access="NOT loggedIn" 
-	  on = "tap:amp-access.login-sign-up,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
+	  on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
 	  tabindex="0"
 	  class="ampstart-btn ml1 caps" >Cree una Cuenta
 	</button>

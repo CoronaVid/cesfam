@@ -2596,7 +2596,7 @@
           {{/items}}
 
 	  {{^items}}
-	    Ud. no tiene presupuestos en otros dispositivos.
+	    
 	  {{/items}}
           <hr/>
       </template>
@@ -2952,6 +2952,10 @@
 
 
       <div class="my2">
+        <p class="price-description"> Seleccionado:
+          <span [text]="token.valor">Token</span>
+	</p>
+
 	<!--
 	<button amp-access="NOT loggedIn" 
 	  on="tap:amp-access.login-sign-in, carrusel-list.refresh"

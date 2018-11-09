@@ -2269,41 +2269,6 @@
 	<!--
 	checkout-section
 	-->
-	<section amp-access="loggedIn">
-
-          <amp-list 
-            template = "carrusel-list-template"
-       
-            credentials="include"
-            class="items m1"
-            width="auto"
-            height="145"
-            items = "."
-            single-item
-            layout="fixed-height"
-            src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get/?clientId=CLIENT_ID(uid)&auth_token=AUTHDATA(auth_token)"
-            id="carrusel-list">
-            <div>
-            </div>
-            <div overflow = ""  class = "list-overflow">VER MÁS </div>
-            <div placeholder>Cargando la lista de electrodomésticos ...</div>
-            <div fallback>Ocurrió un error con el servidor. Reintente en unos minutos.</div>
-            <div overflow = "" class = "list-overflow">VER MÁS</div>
-
-          </amp-list>
-
-
-	  <!---
-	  {{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
-	    {{dueno_remoto}} | current_user {{current_user}}
-	    
-	    {{current_user}}
-	    -->
-	  </template>
-	</section>
-
-
-
         <section>	
 	  <amp-list 
 	    template = "carrusel-list-template"
@@ -2314,7 +2279,7 @@
 	    items = "."
 	    single-item
 	    layout="fixed-height"
-	    src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get/?clientId=CLIENT_ID(uid)&_=RANDOM"
+            src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get/?clientId=CLIENT_ID(uid)&auth_token=AUTHDATA(auth_token)"
 	    id="carrusel-list">
 	    <div>
             </div>

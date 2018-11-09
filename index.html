@@ -850,13 +850,12 @@
       <section amp-access="loggedIn">
 
         <template amp-access-template type="amp-mustache">
+	<!--
 	  {{auth_token}}
-        <!---
 	{{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
 	  {{dueno_remoto}} | current_user {{current_user}}
-	  
-	  {{current_user}}
 	  -->
+	  {{current_user}}
         </template>
       </section>
     </div>
@@ -2971,7 +2970,7 @@
 	  tabindex="0"
 	  on="tap:AMP.setState({ dueno: { invisible: true },  presupuesto: { iniciado: 0 }  }), amp-access.login-sign-out "
 	  class="ampstart-btn ml1 caps"
-	  amp-access-hide>Cierre la Sesión</button>
+	  amp-access-hide>Elimine la Cuenta</button>
       </div>
 
 

@@ -850,27 +850,6 @@
       <section amp-access="loggedIn">
 
         <template amp-access-template type="amp-mustache">
-
-          <amp-list 
-            template = "carrusel-list-template"
-            credentials="include"
-            class="items m1"
-            width="auto"
-            height="145"
-            items = "."
-            single-item
-            layout="fixed-height"
-            src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get/?clientId=CLIENT_ID(uid)&_=RANDOM"
-            id="carrusel-list">
-            <div>
-            </div>
-            <div overflow = ""  class = "list-overflow">VER MÁS </div>
-            <div placeholder>Cargando la lista de electrodomésticos ...</div>
-            <div fallback>Ocurrió un error con el servidor. Reintente en unos minutos.</div>
-            <div overflow = "" class = "list-overflow">VER MÁS</div>
-
-          </amp-list>
-
 	  {{auth_token}}
         <!---
 	{{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
@@ -2294,6 +2273,29 @@
 
 	  <template amp-access-template type="amp-mustache">
 	    {{auth_token}}
+
+
+          <amp-list 
+            template = "carrusel-list-template"
+            credentials="include"
+            class="items m1"
+            width="auto"
+            height="145"
+            items = "."
+            single-item
+            layout="fixed-height"
+            src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get/?clientId=CLIENT_ID(uid)&_=RANDOM"
+            id="carrusel-list">
+            <div>
+            </div>
+            <div overflow = ""  class = "list-overflow">VER MÁS </div>
+            <div placeholder>Cargando la lista de electrodomésticos ...</div>
+            <div fallback>Ocurrió un error con el servidor. Reintente en unos minutos.</div>
+            <div overflow = "" class = "list-overflow">VER MÁS</div>
+
+          </amp-list>
+
+
 	  <!---
 	  {{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
 	    {{dueno_remoto}} | current_user {{current_user}}

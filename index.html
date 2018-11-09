@@ -2990,6 +2990,31 @@
 	    data-step-nr='1'></i>
 	    Contacto
 	  </button>
+	<section [hidden]='currentStep > 0'>
+	  <div class='content'>
+	    <span amp-access-hide='' 
+	      amp-access='loggedIn'
+	      role='button' 
+	      tabindex='0'>
+	      <button 
+		[hidden]='contactoSelected' 
+		class='ampstart-btn mx1 mt1 caps' 
+		on='tap:amp-access.login-sign-out'>Desbloquear
+	      </button>
+	      <hr>
+	      <p>Aléctrico guardará en sus servidores sus datos de contacto y de su proyecto eléctrico por el tiempo que sea necesario para la ejecución de la obra. En cualquier momento puede cerrar su cuenta, solicitándolo a Aléctrico.</p>
+	      <p>Proporcionamos acceso SSL, procesamos las sesiones de usuario con la gema Devise y no entregamos esos datos a nadie. Los datos de proyecto eléctrico podrían estar con acceso público porque es una de las maneras que usamos para darnos a conocer a otros clientes potenciales.</p>
+	      <hr>
+	      <p>¿Ud. acepta estas condiciones de servicio de Aléctrico?</p>
+
+	      <amp-selector 
+		class='poll' 
+		name='animal-poll' 
+		on='select:AMP.setState({contactoSelected: true})'>
+		  <div option='cat'>Acepto</div>
+	      </amp-selector>
+	    </span>
+
 	    <form [hidden]='contactoSelected' action-xhr='https://backend.alectrico.cl/amp/accesos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/amp/accesos/verify'>
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
 	      <p>Ingrese sus datos de contacto</p>
@@ -3026,7 +3051,7 @@
 	      </div>
 
 	      <div class='flex flex-wrap mxn2'>
-		<button type='submit'>Registrar</button>
+		<button [disabled]='contactoSelected' type='submit'>Registrar</button>
 	      </div>
 
 	      <div submit-success=''>
@@ -3054,7 +3079,7 @@
 	      </div>
 
 	    </form>
-	    <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' disabled hidden on='tap:AMP.pushState({currentStep: currentStep + 1})' type='submit'>continuar
+	    <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' on='tap:AMP.pushState({currentStep: currentStep + 1})' type='submit'>continuar
 	    </button>
 	  </div>
 	</section>

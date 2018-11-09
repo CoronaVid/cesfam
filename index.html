@@ -2932,12 +2932,12 @@
 	-->
 
         <button amp-access="NOT loggedIn" 
-	  on="tap:AMP.setState({cuenta: {solicitada: true}})"
+	  on="tap:AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
 	  [hidden] = cuenta.solicitada
 	  tabindex="0"
 	  class="ampstart-btn ml1 caps" >Cree una Cuenta
 	</button>
-	<span amp-access= "NOT subscriber AND NOT loggedIn">... para guardar su trabajo
+	<span amp-access= "NOT subscriber AND NOT loggedIn"  [hidden] = cuenta.solicitada	  >... para guardar su trabajo
 	</span>
       </div>
       <!---
@@ -2981,10 +2981,6 @@
 	hidden
 	[hidden] =  "cuenta.solicitada ? false : true"
         >
-	<h3 class = "m1">
-	  O solicite la Visita a Domicilio de un Instalador Autorizado SEC
-	</h3>
-
 
 	<button [class]="currentStep > 0 ? 'step-title' : 'step-title step-active'" 
 	  class='step-title step-active' 
@@ -3088,6 +3084,10 @@
 	  </div>
 	</section>
 	<!--- ----- --->
+      </div>
+
+      <div
+	[hidden]>
 
 	<button [class]="currentStep != 1 ? 'step-title' : 'step-title step-active'" [disabled]='!contactoSelected' class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 1})'>
 	  <i [class]="problemaSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='2'></i> Descripción del Problema

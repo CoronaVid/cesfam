@@ -3017,7 +3017,7 @@
 	      </amp-selector>
 	    </span>
 
-	    <form [hidden]='!consentimiento' action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
+	    <form amp-access="NOT loggedIn" [hidden]='!consentimiento' action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value="CLIENT_ID(uid)">
 
               <input data-amp-replace='AUTHDATA' name='auth_token' type='hidden' value="AUTHDATA(auth_token)">

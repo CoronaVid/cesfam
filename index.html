@@ -2949,7 +2949,7 @@
       <div class="my2">
 
         <button amp-access="NOT loggedIn" 
-          on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
+          on = "tap:AMP.setState({token: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
 
           tabindex="0"
           class="ampstart-btn ml1 caps" >Cree una Cuenta
@@ -2960,7 +2960,8 @@
 
           <input data-amp-replace='AUTHDATA' name='auth_token' type='hidden' value="AUTHDATA(auth_token)">
 	  <button amp-access="NOT loggedIn"
-	    type = "submit"> Prueba Cuenta
+	    type = "submit"
+            class="ampstart-btn ml1 caps"> Prueba Cuenta
 	  </button>
 
         </form>

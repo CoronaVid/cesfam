@@ -3003,7 +3003,7 @@
 	      </amp-selector>
 	    </span>
 
-	    <form [hidden]='contactoSelected' action-xhr='https://backend.alectrico.cl/contectos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/contactos/verify'>
+	    <form [hidden]='contactoSelected' action-xhr='https://backend.alectrico.cl/contectos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr='https://backend.alectrico.cl/contactos/verify/?auth_token=AUTHDATA(auth_token)'>
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
 	      <p>Ingrese sus datos de contacto</p>
 	      <div class='px2 mt4 md-mt3'>
@@ -3072,8 +3072,6 @@
 	  </div>
 	</section>
       </div>
-    </div>
-  </div>
 
       <amp-analytics type="googleanalytics">
 	<script type="application/json">{

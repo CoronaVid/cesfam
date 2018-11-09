@@ -2271,14 +2271,9 @@
 	-->
 	<section amp-access="loggedIn">
 
-	  <template amp-access-template 
-            id = access-template
-            type="amp-mustache">
-	    {{auth_token}}
-          </template>
-
           <amp-list 
-            template = "access-template"       
+            template = "carrusel-list-template"
+       
             credentials="include"
             class="items m1"
             width="auto"
@@ -2286,7 +2281,7 @@
             items = "."
             single-item
             layout="fixed-height"
-            src="https://backend.alectrico.cl/api/v1/electrico/circuitos/carrusel/?clientId=CLIENT_ID(uid)&_=RANDOM"
+            src="https://backend.alectrico.cl/api/v1/electrico/circuitos/carrusel/AUTHDATA(auth_token)/?clientId=CLIENT_ID(uid)"
             id="carrusel-list">
             <div>
             </div>

@@ -848,6 +848,7 @@
         </template>
       </section>
       <section amp-access="loggedIn">
+
         <template amp-access-template type="amp-mustache">
 	  {{auth_token}}
         <!---
@@ -2268,6 +2269,21 @@
 	<!--
 	checkout-section
 	-->
+	<section amp-access="loggedIn">
+
+	  <template amp-access-template type="amp-mustache">
+	    {{auth_token}}
+	  <!---
+	  {{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
+	    {{dueno_remoto}} | current_user {{current_user}}
+	    
+	    {{current_user}}
+	    -->
+	  </template>
+	</section>
+
+
+
         <section>	
 	  <amp-list 
 	    template = "carrusel-list-template"
@@ -2292,7 +2308,6 @@
 	  <template 
 	  id = "carrusel-list-template"
 	  type="amp-mustache">
-	    {{auth_token}}
 	    <!--
 	    Electrodomésticos en este dispositivo
 	    <br/>

@@ -2934,7 +2934,7 @@
 	-->
 
         <button amp-access="NOT loggedIn" 
-	  on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}}),AMP.setState {auth_token: event.response.auth_token } )"
+	  on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}}),AMP.setState({el_token: event.response.auth_token } )"
 	  tabindex="0"
 	  class="ampstart-btn ml1 caps" >Cree una Cuenta
 	</button>
@@ -2944,7 +2944,7 @@
 
       <div class="my2">
 
-	<h1 [text] = auth_token> Token </h1>
+	<h1 [text] = el_token> Token </h1>
 	<!--
 	<button amp-access="NOT loggedIn" 
 	  on="tap:amp-access.login-sign-in, carrusel-list.refresh"

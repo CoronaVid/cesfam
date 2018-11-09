@@ -2952,9 +2952,18 @@
           on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
 
           tabindex="0"
-          class="ampstart-btn ml1 caps" >Cree una Cuenta II
+          class="ampstart-btn ml1 caps" >Cree una Cuenta
         </button>
 
+	<form action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' >
+          <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value="CLIENT_ID(uid)">
+
+          <input data-amp-replace='AUTHDATA' name='auth_token' type='hidden' value="AUTHDATA(auth_token)">
+	  <button amp-access="NOT loggedIn"
+	    type = "submit"> Prueba Cuenta
+	  </button>
+
+        </form>
 
 	<h1 [text] = el_token> Token </h1>
 	<!--
@@ -3017,7 +3026,7 @@
 	      </amp-selector>
 	    </span>
 
-	    <form amp-access="NOT loggedIn" action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
+	    <form [hidden]='!consentimiento' action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value="CLIENT_ID(uid)">
 
               <input data-amp-replace='AUTHDATA' name='auth_token' type='hidden' value="AUTHDATA(auth_token)">

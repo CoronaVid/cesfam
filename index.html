@@ -2999,12 +2999,12 @@
 	      <amp-selector 
 		class='poll' 
 		name='animal-poll' 
-		on='select:AMP.setState({contactoSelected: true})'>
+		on='select:AMP.setState({consentimiento: true})'>
 		  <div option='cat'>Acepto</div>
 	      </amp-selector>
 	    </span>
 
-	    <form [hidden]='contactoSelected' action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
+	    <form [hidden]='NOT consentimiento' action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
               <input data-amp-replace='READER_ID' name='rid' type='hidden' value='READER_ID'>
 

@@ -2931,10 +2931,13 @@
         </span> 
          on="tap:amp-access.login-sign-up,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({registro_usuario: {iniciado: 1}})"
           amp-access-hide
+           on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}}),AMP.setState({el_token: event.response.auth_token } )"
+
 	-->
 
         <button amp-access="NOT loggedIn" 
-	  on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}}),AMP.setState({el_token: event.response.auth_token } )"
+	  on = "tap:amp-access.login-create-token,AMP.setState({el_token: event.response.auth_token } )"
+
 	  tabindex="0"
 	  class="ampstart-btn ml1 caps" >Cree una Cuenta
 	</button>

@@ -2933,6 +2933,7 @@
           amp-access-hide
 	-->
 
+
         <button amp-access="NOT loggedIn" 
 	  on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
 
@@ -2943,7 +2944,17 @@
 	</span>
       </div>
 
+
+
       <div class="my2">
+
+        <button amp-access="NOT loggedIn" 
+          on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
+
+          tabindex="0"
+          class="ampstart-btn ml1 caps" >Cree una Cuenta II
+        </button>
+
 
 	<h1 [text] = el_token> Token </h1>
 	<!--

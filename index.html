@@ -2271,12 +2271,14 @@
 	-->
 	<section amp-access="loggedIn">
 
-	  <template amp-access-template type="amp-mustache">
+	  <template amp-access-template 
+            id = access-template
+            type="amp-mustache">
 	    {{auth_token}}
-
+          </template>
 
           <amp-list 
-            template = "carrusel-list-template"
+            template = "access-template"       
             credentials="include"
             class="items m1"
             width="auto"

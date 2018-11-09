@@ -3004,9 +3004,8 @@
 	      </amp-selector>
 	    </span>
 
-	    <form [hidden]='NOT consentimiento' action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
+	    <form [hidden]='NOT consentimiento' action-xhr='https://backend.alectrico.cl/contactos/create/?auth_token=AUTHDATA(auth_token)' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value='CLIENT_ID(uid)'>
-              <input data-amp-replace='AUTHDATA' name='auth_token' type='text' value='AUTHDATA(auth_token)'>
 
 
 	      <p>Ingrese sus datos de contacto</p>

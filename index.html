@@ -86,6 +86,7 @@
     "create-token":"https://designerbackend.herokuapp.com/create_token.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-in": "https://designerbackend.herokuapp.com/sign_in.json/?rid=READER_ID&email=123@alectrico.cl&password=123123123&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-out": "https://designerbackend.herokuapp.com/logout.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+     "destroy-user": "https://designerbackend.herokuapp.com/destroy_user.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-up":  "https://designerbackend.herokuapp.com/sign_up.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
     },
     "authorizationFallbackResponse": {
@@ -2959,7 +2960,7 @@
 
 	<button amp-access="loggedIn"
 	  tabindex="0"
-	  on="tap:AMP.setState({ dueno: { invisible: true },  presupuesto: { iniciado: 0 }  }), amp-access.login-sign-out "
+	  on="tap:amp-access.login-destroy-user,AMP.setState({ dueno: { invisible: true },  presupuesto: { iniciado: 0 }  })"
 	  class="ampstart-btn ml1 caps"
 	  amp-access-hide>Elimine la Cuenta</button>
       </div>

@@ -2928,12 +2928,12 @@
           [hidden] = "presupuesto.Iniciado == 1 ? false : true">   -- o --    
         </span> 
          on="tap:amp-access.login-sign-up,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({registro_usuario: {iniciado: 1}})"
-
+          amp-access-hide
 	-->
 
         <button amp-access="NOT loggedIn" 
-	  on="AMP.setState({cuenta: {solicitada: true}})"
-	  amp-access-hide
+	  on="tap:AMP.setState({cuenta: {solicitada: true}})"
+	  [hidden] = cuenta.solicitada
 	  tabindex="0"
 	  class="ampstart-btn ml1 caps" >Cree una Cuenta
 	</button>

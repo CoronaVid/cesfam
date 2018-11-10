@@ -1,4 +1,4 @@
-<!doctype html>
+u!doctype html>
 <html amp='' lang='es-CL' prefix='og: http://ogp.me/ns#'>
   <head>
 
@@ -2936,7 +2936,6 @@
 
         <button amp-access="NOT loggedIn" 
 	  on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}}),AMP.setState({presupuesto: {iniciado: 1}})"
-
 	  tabindex="0"
 	  class="ampstart-btn ml1 caps" >Cree una Cuenta
 	</button>
@@ -2944,30 +2943,8 @@
 	</span>
       </div>
 
-
-
       <div class="my2">
 
-        <button amp-access="NOT loggedIn" 
-          on = "tap:AMP.setState({token: {solicitada: true}})"
-
-          tabindex="0"
-          class="ampstart-btn ml1 caps" >Cree una Cuenta
-        </button>
-
-	<form action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='NOT loggedIn' class='' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' >
-          <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value="CLIENT_ID(uid)">
-
-          <input data-amp-replace='AUTHDATA' name='auth_token' type='hidden' value="AUTHDATA(auth_token)">
-	  <button amp-access="NOT loggedIn"
-            on = "tap:amp-access.login-create-token"
-	    type = "submit"
-            class="ampstart-btn ml1 caps"> Prueba Cuenta
-	  </button>
-
-        </form>
-
-	<h1 [text] = el_token> Token </h1>
 	<!--
 	<button amp-access="NOT loggedIn" 
 	  on="tap:amp-access.login-sign-in, carrusel-list.refresh"

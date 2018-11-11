@@ -2974,6 +2974,7 @@
 
 	<button [class]="currentStep > 0 ? 'step-title' : 'step-title step-active'" 
 	  class='step-title step-active' 
+	  amp-access = "NOT loggedIn"
 	  on='tap:AMP.pushState({ currentStep: 0})'>
 	  <i [class]="contactoSelected ? 'step-complete' : 'step-incomplete'" 
 	    class='step-incomplete' 
@@ -3075,6 +3076,7 @@
 	    -->
 	    <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' 
               on="tap:amp-access.login-sign-in"
+	      amp-access = "NOT loggedIn"
 	      type='submit'>continuar
 	    </button>
 	  </div>

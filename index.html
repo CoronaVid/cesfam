@@ -2271,8 +2271,47 @@
 	<!--
 	checkout-section
 	-->
+	<section>
+	  <amp-list
+	    template = "items-list-template"
+	    credenticals = "include"
+	    class="items m1"
+	    width="auto"
+	    height="145"
+	    items = "."
+	    single-item
+	    layout="fixed-height"
+	    src="https://backend.alectrico.cl/items/?auth_token=AUTHDATA(auth_token)"	 
+	    id="items-list" >
+	    <div>
+	    </div>
+	    <div overflow
+	      class = "list-overflow">
+	      VER MAS
+	    </div>
+            <div placeholder>
+	      Cargando items
+	    </div>
+            <div fallback>
+	      Error cargando items
+	    </div>
+	  </amp-list>
+	</section>
+
+	<template 
+	  type = "amp-mustache"
+	  id = "items-list-template" >
+	   {{^items}}
+	   No hay items
+	   {{/items}}
+	   {{#items}}
+	   items
+	   {{/items}}
+	</template>
+
         <section>	
 	  <amp-list 
+	    hidden
 	    template = "carrusel-list-template"
 	    credentials="include"
 	    class="items m1"

@@ -2917,6 +2917,8 @@
 	</div>
       </template>
 
+    </div>
+  </div>
       <div class="my2">
 	<!--
         <button 
@@ -2944,8 +2946,10 @@
 	  tabindex="0"
 	  class="ampstart-btn ml1 caps" >Cree una Cuenta
 	</button>
+
 	<span amp-access= "NOT subscriber AND NOT loggedIn"  [hidden] = cuenta.solicitada	  >... para guardar su trabajo
 	</span>
+
       </div>
 
       <div class="my2">
@@ -2968,7 +2972,8 @@
 	  tabindex="0"
 	  on="tap:amp-access.login-destroy-reader,AMP.setState({ dueno: { invisible: true },  presupuesto: { iniciado: 0 }  })"
 	  class="ampstart-btn ml1 caps"
-	  amp-access-hide>Elimine la Cuenta</button>
+	  amp-access-hide>Elimine la Cuenta
+	</button>
       </div>
 
 
@@ -2990,7 +2995,7 @@
 	    </button>
 	  -->
 	  <section [hidden]='currentStep > 0'>
-	    <div class='content'>
+	    <div class='clearfix content'>
 	      <span amp-access-hide='' 
 		amp-access='NOT loggedIn'
 		role='button' 

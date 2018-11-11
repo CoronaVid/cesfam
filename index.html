@@ -2969,12 +2969,12 @@
 
       <div class='stepper vertical'
 	hidden
+	amp-access='NOT loggedIn'
 	[hidden] =  "cuenta.solicitada ? false : true"
         >
 
 	<button [class]="currentStep > 0 ? 'step-title' : 'step-title step-active'" 
 	  class='step-title step-active' 
-	  amp-access = "NOT loggedIn"
 	  on='tap:AMP.pushState({ currentStep: 0})'>
 	  <i [class]="contactoSelected ? 'step-complete' : 'step-incomplete'" 
 	    class='step-incomplete' 

@@ -839,10 +839,12 @@
         height="24" 
         alt="logo flash">
       </amp-img>
+
       <h1 id="abe-preview-header-title" 
         class="h3 center truncate caps">
         Aléctrico
       </h1>
+
       <section amp-access="NOT loggedIn">
         <template amp-access-template type="amp-mustache">
 	<!--
@@ -850,6 +852,8 @@
 	 -->
         </template>
       </section>
+
+
       <section amp-access="loggedIn">
 
         <template amp-access-template type="amp-mustache">
@@ -860,6 +864,7 @@
 	  -->
 	  {{current_user}}
         </template>
+
       </section>
     </div>
 
@@ -2966,7 +2971,7 @@
 
 
         <button amp-access="NOT loggedIn" 
-	  on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}, presupuesto: {iniciado: 1}})"
+	  on = "tap:amp-access.login-create-token,AMP.setState({cuenta: {solicitada: true}, presupuesto: {iniciado: 1}}),items-list.refresh"
 	  tabindex="0"
 	  class="ampstart-btn ml1 caps" >Cree una Cuenta
 	</button>

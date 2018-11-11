@@ -2983,11 +2983,12 @@
 	<section [hidden]='currentStep > 0'>
 	  <div class='content'>
 	    <span amp-access-hide='' 
-	      amp-access='loggedIn'
+	      amp-access='NOT loggedIn'
 	      role='button' 
 	      tabindex='0'>
 	      <button 
 		[hidden]='contactoSelected' 
+               on="tap:amp-access.login-sign-in"
 		class='ampstart-btn mx1 mt1 caps'>Política de Protección de Los Datos Personales
 	      </button>
 	      <hr>
@@ -3040,7 +3041,6 @@
 
 	      <div class='flex flex-wrap mxn2'>
 		<button [disabled]='contactoSelected' 
-		  on="tap:amp-access.login-sign-in"
 		  type='submit'
 		  >Encriptar</button>
 	      </div>

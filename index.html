@@ -2983,12 +2983,11 @@
 	<section [hidden]='currentStep > 0'>
 	  <div class='content'>
 	    <span amp-access-hide='' 
-	      amp-access='NOT loggedIn'
+	      amp-access='loggedIn'
 	      role='button' 
 	      tabindex='0'>
 	      <button 
 		[hidden]='contactoSelected' 
-               on="tap:amp-access.login-sign-in"
 		class='ampstart-btn mx1 mt1 caps'>Política de Protección de Los Datos Personales
 	      </button>
 	      <hr>
@@ -3070,7 +3069,13 @@
 	      </div>
 
 	    </form>
-	    <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' on='tap:AMP.pushState({currentStep: currentStep + 1})' type='submit'>continuar
+
+	    <!---
+	    on='tap:AMP.pushState({currentStep: currentStep + 1})'
+	    -->
+	    <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' 
+              on="tap:amp-access.login-sign-in"
+	      type='submit'>continuar
 	    </button>
 	  </div>
 	</section>

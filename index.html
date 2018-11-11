@@ -2305,13 +2305,10 @@
 	    {{^items}}
 	    Presione AGREGAR para agregar electrodomésticos.
 	    {{/items}}
-	    
+	   
+	     
             {{#items}}
-<!--
-	    <a class="text-decoration-none p1"
-	      href="#">
-            </a>
--->
+	     <!--
 	      <amp-img width="100"
 		tabindex = 0
 		height="90"
@@ -2332,28 +2329,15 @@
 		       <button  type = "submit" >X</button>
 		</form>
               </amp-img>
-
-
+              -->
+              <!--
 	      <div
 		id = "caption"
 		hidden>
 		{{nombre}}. Potencia: {{potencia}} W. Circuito: {{circuito}}.
-		<!---
-		<form method   = "POST"
-		    class = "close-gallery-button"
-		    action-xhr = "https://backend.alectrico.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
-		    target    = "_top"
-		    on = "submit-success:carrusel-list.refresh">
-		   <input name = "clientId" 
-		       type = "hidden" 
-		       value = "CLIENT_ID(uid)" 
-		       data-amp-replace = "CLIENT_ID">
-		   <button  type = "submit" > x </button>
-
-		</form>
-		-->
-
 	      </div>
+	      -->
+	      Hay items
             {{/items}}
 	    <!--
             <form method   = "POST"

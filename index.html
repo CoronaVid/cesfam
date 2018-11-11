@@ -84,7 +84,7 @@
     "noPingback": true,
     "login": {
     "create-token":"https://designerbackend.herokuapp.com/create_token.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-    "sign-in": "https://designerbackend.herokuapp.com/sign_in.json/?rid=READER_ID&email=123@alectrico.cl&password=123123123&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+    "sign-in": "https://designerbackend.herokuapp.com/sign_in.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-out": "https://designerbackend.herokuapp.com/logout.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
      "destroy-reader": "https://designerbackend.herokuapp.com/destroy_reader.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
     "sign-up":  "https://designerbackend.herokuapp.com/sign_up.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
@@ -3005,9 +3005,6 @@
 
 	    <form [hidden]='!consentimiento' action-xhr='https://backend.alectrico.cl/contactos/create' amp-access='loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr="https://backend.alectrico.cl/contactos/verify">
 	      <input data-amp-replace='CLIENT_ID' name='clientId' type='hidden' value="CLIENT_ID(uid)">
-
-              <input data-amp-replace='AUTHDATA' name='auth_token' type='hidden' value="AUTHDATA(auth_token)">
-
 	      <p>Ingrese sus datos de contacto</p>
 	      <div class='px2 mt4 md-mt3'>
 		<div class='flex flex-wrap mxn2'>
@@ -3042,7 +3039,9 @@
 	      </div>
 
 	      <div class='flex flex-wrap mxn2'>
-		<button [disabled]='contactoSelected' type='submit'
+		<button [disabled]='contactoSelected' 
+		  on="tap:amp-access.login-sign-in"
+		  type='submit'
 		  >Encriptar</button>
 	      </div>
 

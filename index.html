@@ -2272,6 +2272,11 @@
 	checkout-section
 	-->
 	<section>
+	  <button 
+	    on="tap:items-list.refresh"
+	    type='submit'>Refresh
+	  </button>
+
 	  <amp-list
 	    template = "items-list-template"
 	    credentials = "omit"
@@ -3113,11 +3118,6 @@
 		amp-access = "NOT loggedIn"
 		type='submit'>continuar
 	      </button>
-              <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' 
-                on="tap:items-list.refresh"
-                amp-access = "NOT loggedIn"
-                type='submit'>Refresh
-              </button>
 
 
 	    </div>

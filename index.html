@@ -3109,10 +3109,17 @@
 	      on='tap:AMP.pushState({currentStep: currentStep + 1})'
 	      -->
 	      <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' 
-		on="tap:amp-access.login-sign-in,AMP.pushState({currentStep: 0, contactoSelected: false, consentimiento: false, cuenta: {solicitada: false} }),items-list.refresh"
+		on="tap:amp-access.login-sign-in,AMP.pushState({currentStep: 0, contactoSelected: false, consentimiento: false, cuenta: {solicitada: false} })"
 		amp-access = "NOT loggedIn"
 		type='submit'>continuar
 	      </button>
+              <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' 
+                on="items-list.refresh"
+                amp-access = "NOT loggedIn"
+                type='submit'>Refresh
+              </button>
+
+
 	    </div>
 	</section>
       </div>

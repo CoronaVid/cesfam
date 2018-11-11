@@ -3078,7 +3078,7 @@
 	    on='tap:AMP.pushState({currentStep: currentStep + 1})'
 	    -->
 	    <button [disabled]='!contactoSelected' [hidden]='!contactoSelected' 
-	      on="tap:amp-access.login-sign-in,AMP.pushState({currentStep: 0} {contacto: {Selected: false} })"
+	      on="tap:amp-access.login-sign-in,AMP.pushState({currentStep: 0, contacto: {Selected: false} })"
 	      amp-access = "NOT loggedIn"
 	      type='submit'>continuar
 	    </button>

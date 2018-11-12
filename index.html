@@ -2277,11 +2277,6 @@
 	checkout-section
 	-->
 	<section>
-	  <button 
-	    on="tap:items-list.refresh"
-	    type='submit'>Refresh
-	  </button>
-
 	  <amp-list
 	    template = "items-list-template"
 	    credentials = "omit"
@@ -2299,11 +2294,12 @@
 	      class = "list-overflow">
 	      VER MAS
 	    </div>
-            <div placeholder>
-	      Cargando items
-	    </div>
             <div fallback>
-	      Error cargando items
+	     <button 
+	       class='flex flex-wrap mxn2'
+      	       on="tap:items-list.refresh"
+		type='submit'>Refrescar
+	      </button>
 	    </div>
 	  </amp-list>
 	</section>

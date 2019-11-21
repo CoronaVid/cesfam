@@ -3085,21 +3085,40 @@
 
                     <div class='col-10 md-col-10 px2'>
                       <div class='ampstart-input inline-block relative m0 p0 mb3'>
-                        <input class='block border-none p0 m0' id='verification-password' name='password' pattern='\w{6,}' placeholder='Password (6 caracteres)' required='' type='password' value=''>
+                        <input class='block border-none p0 m0' id='verification-password' name='password' pattern='\w{8,}' placeholder='Password (6 caracteres)' required='' type='password' value=''>
                         <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='password'>Password</label>
                         <span validation-for='verification-password' visible-when-invalid='valueMissing'></span>
                         <span validation-for='verification-password' visible-when-invalid='typeMismatch'></span>
-                        <span validation-for='verification-password' visible-when-invalid='patternMismatch'>Debe tener 6 caracteres.</span>
+                        <span validation-for='verification-password' visible-when-invalid='patternMismatch'>Debe tener 8 o más aracteres.</span>
                       </div>
                     </div>
+
+                    <div class='col-10 md-col-10 px2'>
+                      <div class='ampstart-input inline-block relative m0 p0 mb3'>
+                        <input class='block border-none p0 m0' id='verification-password' name='password_confirmation' pattern='\w{8,}' placeholder='Password (6 caracteres)' required='' type='password' value=''>
+                        <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='password'>Repita la Password</label>
+                        <span validation-for='verification-password' visible-when-invalid='valueMissing'></span>
+                        <span validation-for='verification-password' visible-when-invalid='typeMismatch'></span>
+                        <span validation-for='verification-password' visible-when-invalid='patternMismatch'>Debe tener 8 o más caracteres.</span>
+                      </div>
+                    </div>
+
+
+
+
+
 
 		  </div>
 		</div>
 
+
+
+
+
 		<div class='flex flex-wrap mxn2'>
 		  <button [disabled]='contactoSelected' 
 		    type='submit'
-		    >Encriptar</button>
+		    >Suscribirse</button>
 		</div>
 
 		<div submit-success=''>

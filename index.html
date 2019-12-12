@@ -2291,12 +2291,6 @@
             src="https://backend.alectrico.cl/api/v1/electrico/circuitos/get.json?auth_token=AUTHDATA(auth_token)"  
 	    id="items-list" >
 	    <div>
-               <button 
-                 amp-access = "loggedIn"
-                 class="ampstart-btn ml1 caps"
-                 on="tap:items-list.refresh"
-                  type='submit'>Refrescar
-                </button>
 	    </div>
 	    <div overflow
 	      class = "list-overflow">
@@ -2326,7 +2320,7 @@
                action-xhr = "https://backend.alectrico.cl/api/v1/electrico/circuitos/addToCircuito.json"
                target    = "_top"
                on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
-               <input name = "clientId" 
+               <input name = "auth_token" 
                   type = "hidden" 
                   value = "AUTHDATA(auth_token)" 
                   data-amp-replace = "AUTHDATA">

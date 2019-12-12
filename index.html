@@ -2312,9 +2312,25 @@
 	<template 
 	  type = "amp-mustache"
 	  id = "items-list-template" >
+
+            <form method   = "POST"
+               class = "close-gallery-button"
+               action-xhr = "https://www.alectrico.cl/api/v1/electrico/circuitos/addToCircuito.json"
+               target    = "_top"
+               on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
+               <input name = "clientId" 
+                  type = "hidden" 
+                  value = "CLIENT_ID(uid)" 
+                  data-amp-replace = "CLIENT_ID">
+                 <button  type = "submit" >+</button>
+             </form>
+
 	   {{^items}}
 	   No hay items
 	   {{/items}}
+
+
+
 	   {{#items}}
               <amp-img width="100"
                 tabindex = 0

@@ -80,15 +80,15 @@
 
     <script id="amp-access" type="application/json">
     {
-    "authorization": "https://designerbackend.herokuapp.com/authenticate.json?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
+    "authorization": "https://backend.alectrica.cl/authenticate.json?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
     "noPingback": true,
     "login": {
-    "create-token":"https://designerbackend.herokuapp.com/create_token.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-    "sign-in": "https://designerbackend.herokuapp.com/sign_in.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-    "sign-out": "https://designerbackend.herokuapp.com/logout.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-     "destroy-reader": "https://designerbackend.herokuapp.com/destroy_reader.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-     "destroy-user": "https://designerbackend.herokuapp.com/destroy_user.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-     "sign-up":  "https://designerbackend.herokuapp.com/sign_up.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
+    "create-token":"https://backend.alectrica.cl/create_token.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+    "sign-in": "https://backend.alectrica.cl/sign_in.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+    "sign-out": "https://backend.alectrica.cl/logout.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+     "destroy-reader": "https://backend.alectrica.cl/destroy_reader.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+     "destroy-user": "https://backend.alectrica.cl/destroy_user.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
+     "sign-up":  "https://backend.alectrica.cl/sign_up.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
     },
     "authorizationFallbackResponse": {
       "error": true,
@@ -2447,7 +2447,7 @@
 
 	<amp-install-serviceworker
 	  src="/sw.js"
-	  data-iframe-src="https://designer.com/sw.js"
+	  data-iframe-src="https://backend.alectrico.cl/sw.js"
 	  layout="nodisplay">
 	</amp-install-serviceworker>
 

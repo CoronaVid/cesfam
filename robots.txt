@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://fronton.alectrico.cl/sitemap.xml
+Sitemap: https://help.alectrico.cl/sitemap.xml

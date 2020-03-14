@@ -2013,7 +2013,7 @@
 	      </amp-state>
 
 	      <p class="price-description"> Seleccionado:
-		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Ampolleta LED.</span> </p>
+		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Fiebre de 27 °C.</span> </p>
 
 	      <!--
                 on = "submit-success:carrusel-list.refresh,cart-list.refresh;submit-error:carrusel-list.refresh,cart-list.refresh,carrusel-list.show,boton-login.show"
@@ -2030,11 +2030,11 @@
 
                 <input type="submit"
                   class="ampstart-btn caps"
-                  name=" Agregar "
+                  name=" Agregar Síntoma "
                   value="  Agregar  ">
 
 		<div class="items-center flex">
-		  <label for="color">Morbilidad:</label>
+		  <label for="color">Gravedad:</label>
 		  <amp-selector name="color"
 		    layout="container"
 		    [selected]="product.selectedColor"
@@ -2080,7 +2080,7 @@
 		</div>
 
 		<div class="items-center flex">
-		  <label for="quantity">Cantidad:</label>
+		  <label for="quantity">Días Con El Síntoma:</label>
 		  <amp-selector name="quantity"
 		    layout="container">
 		    <ul class="p0 m1">

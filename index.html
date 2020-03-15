@@ -2034,7 +2034,9 @@
                   value="  Agregar Síntoma ">
 
 		<div class="items-center flex">
+                 <!--
 		  <label for="color">Tipo de Síntoma:</label>
+                 -->
 		  <amp-selector name="color"
 		    layout="container"
 		    [selected]="product.selectedColor"
@@ -2050,6 +2052,18 @@
 				  selectedPotencia: product[event.targetOption].sizes[product.selectedPotencia] != 'inadecuado' ? product.selectedPotencia : product[event.targetOption].defaultPotencia
 				}
 			      })">
+
+                   <label for="color">Crónico de:</label>
+
+                    <ul class="p0 m1">
+                      <li>
+                        <div option="red"
+                          class="square red"></div>
+                      </li>
+                    </ul>
+
+                   <label for="color">Tipo de Síntoma:</label>
+
 		    <ul class="p0 m1">
 
 		      <!--

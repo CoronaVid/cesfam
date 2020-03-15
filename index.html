@@ -1295,6 +1295,7 @@
 		  [slide]="product.selectedSlideForBlue"
 		  on="slideChange: AMP.setState({product: {selectedSlide: event.index, selectedSlideForBlue: event.index}})"
 		  class="fadeIn"
+                  hidden
 		  [hidden]="product.selectedColor != 'blue'">
 		  <div 
 		    role="button"
@@ -2094,7 +2095,7 @@
               </div>
 
                <section>
-                <label>Vacantes de Hospitalización:</label>
+                <label>Tipos de Circuitos de Hospitalización:</label>
 		<div class="items-center flex">
 		  <amp-selector name="circuito"
 		    layout="container"

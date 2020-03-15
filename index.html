@@ -1670,7 +1670,7 @@
                 -->
 
 		<amp-image-lightbox id="llamar-lightbox"
-		  layout="nodisplay">
+		  layout="display">
 		  <div 
 		    role="button"
 		    tabindex="0">
@@ -1860,22 +1860,22 @@
 			"1": "Tos."
 		      },
 		      "circuitos": {
-			"0": "I",
-			"1": "I"
+			"0": "CESFAM",
+			"1": "SAPU"
 		      },
 		      "potencias": {
-			"C": "",
-			"D": "",
-			"E": "",
-			"N": "",
-			"Z": "",
-			"A": "",
-			"S": "",
-			"M": "",
-			"L": "",
-			"H": "",
-			"I": "",
-			"R": ""
+			"C": "inadecuado",
+			"D": "inadecuado",
+			"E": "inadecuado",
+			"N": "inadecuado",
+			"Z": "inadecuado",
+			"A": "inadecuado",
+			"S": "inadecuado",
+			"M": "inadecuado",
+			"L": "inadecuado",
+			"H": "inadecuado",
+			"I": "$ 50.000",
+			"R": "inadecuado"
 		      },
 		      "defaultPotencia": "I"
 		    },
@@ -1890,7 +1890,7 @@
 			"5": "579"
 		      },	
 		      "nombres" : {
-			"0": "Licuadora.",
+			"0": "Fiebre.",
 			"1": "Microondas.",
 			"2": "Hornillo.",
 			"3": "Hervidor.",
@@ -1911,11 +1911,11 @@
 			"C": "inadecuado",
 			"D": "inadecuado",
 			"E": "inadecuado",
-			"N": "3520 W",
+			"N": " $ 50.000",
 			"Z": "inadecuado",
 			"A": "inadecuado",
 			"S": "inadecuado",
-			"M": "3520 W",
+			"M": " $ 0.000",
 			"L": "inadecuado",
 			"H": "inadecuado",
 			"I": "inadecuado",
@@ -1938,7 +1938,7 @@
 			"8": "138"
 		      },
 		      "nombres": {
-			"0": "Plancha.",
+			"0": "Falta de Aire.",
 			"1": "Frigobar.",
 			"2": "Refrigerador.",
 			"3": "Refrigerador de dos puertas.",
@@ -2013,7 +2013,7 @@
 	      </amp-state>
 
 	      <p class="price-description"> Seleccionado:
-		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Fiebre de 37 °C.</span> </p>
+		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Fiebre.</span> </p>
 
 	      <!--
                 on = "submit-success:carrusel-list.refresh,cart-list.refresh;submit-error:carrusel-list.refresh,cart-list.refresh,carrusel-list.show,boton-login.show"

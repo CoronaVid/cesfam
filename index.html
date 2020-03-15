@@ -2290,7 +2290,7 @@
               </section>
 	    <p class="price-description">
 	      <span > Derivación: </span>
-	      <span [text]="product.circuitos[product.selectedPotencia]">I: Iluminación</span>
+	      <span [text]="product.circuitos[product.selectedPotencia]">I</span>
 	      <span [text]="product[product.selectedColor].potencias[product.selectedPotencia]">200 W</span>
 	    </p>
 	 <!-- fin de Galería de Productos -->
@@ -2423,7 +2423,7 @@
 	    <div>
             </div>
             <div overflow = ""  class = "list-overflow">VER MÁS </div>
-            <div placeholder>Cargando la lista de electrodomésticos ...</div>
+            <div placeholder>Cargando la lista de síntomas ...</div>
             <div fallback>Ocurrió un error con el servidor. Reintente en unos minutos.</div>
             <div overflow = "" class = "list-overflow">VER MÁS</div>
 
@@ -2440,7 +2440,7 @@
 	    <hr/>
 	    -->
 	    {{^items}}
-	    Presione AGREGAR para agregar electrodomésticos.
+	    Presione AGREGAR para agregar síntomas.
 	    {{/items}}
 	   
 	     
@@ -2468,7 +2468,7 @@
 	      <div
 		id = "caption"
 		hidden>
-		{{nombre}}. Potencia: {{potencia}} W. Circuito: {{circuito}}.
+		{{nombre}}. : {{potencia}} W. : {{circuito}}.
 	      </div>
             {{/items}}
 	    <!--
@@ -3089,7 +3089,7 @@
 	  tabindex="0"
 	  on="tap:amp-access.login-destroy-reader,AMP.setState({ dueno: { invisible: true },  presupuesto: { iniciado: 0 }  })"
 	  class="ampstart-btn ml1 caps"
-	  amp-access-hide>Elimine la Cuenta
+	  amp-access-hide>Elimine la Cuenta para Siempre
 	</button>
       </div>
 
@@ -3122,9 +3122,9 @@
 		  >Política de Protección de Los Datos Personales
 		</small>
 		<hr>
-		<small>Los datos qué Ud. ingrese serán hechos públicos desde el momento en que abra su cuenta y eso tendrá caracter irrevocable. Se solicitará una password para consolidar los accesos desde diferentes dispositivos como celulares, tablets y computadores.</small>
-                 <small>Los datos peramanecerán privados si no abre ninguna cuenta.</small>
-                 <small>Los datos que Ud. haga público podrán ser usados por instituciones de salud que cuenten con un token de acceso con el fin tomar medidas calificadas para combatir la epidema de Corona Virus. Al abrir la cuenta Ud. consiente explícitamente en que sean usados para ese fin. No es posible evitar otros usos fuera del mencionado, por lo que se recomienda un actuar prudente.</small>
+		<small>Sus datos personales y sus síntomas serán hechos públicos desde el momento en que abra su cuenta y eso tendrá caracter de irrevocable. Si elimina la cuenta, los datos desparecerán del servidor coronavid pero no de las copias que otros hayan realizado. </small>
+
+                 <small>Los datos que Ud. haga público podrán ser usados por instituciones de salud que cuenten con un token de acceso con el fin tomar medidas calificadas para combatir la epidema de Corona Virus. Al abrir la cuenta Ud. consiente explícitamente en que sean usados para ese fin. Pero no es posible garantizar que ocurran otros usos fuera del mencionado, por lo que se recomienda un actuar prudente.</small>
 
 
 

@@ -2070,7 +2070,7 @@
 	      -->
 	      <form id="order"
 		method="POST"
-		action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json" 
+		action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json?auth_token=AUTHDATA(auth_token)&macarron_de_autorizacion=AUTHDATA(macarron_de_autorizacion)"
 		target="_top"
 		on="submit-success:AMP.setState({ presupuesto: { Iniciado: (presupuesto.Iniciado + 1)}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh"
 		class="flex flex-wrap m1">

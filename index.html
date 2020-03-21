@@ -2182,23 +2182,22 @@
                 on = "submit-success:carrusel-list.refresh,cart-list.refresh;submit-error:carrusel-list.refresh,cart-list.refresh,carrusel-list.show,boton-login.show"
 
 	      -->
-	      <form id="order"
-		method="POST"
-		action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json"
-		target="_top"
-		on="submit-success:AMP.setState({ presupuesto: { Iniciado: (presupuesto.Iniciado + 1)}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh"
-		class="flex flex-wrap m1">
+	     <form id="order"
+	       method="POST"
+	       action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json"
+	       target="_top"
+	       on="submit-success:AMP.setState({ presupuesto: { Iniciado: (presupuesto.Iniciado + 1)}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh"
+	       class="flex flex-wrap m1">
 
-              <div>
+               <div>
+
+                 <input type="submit"
+                   class="ampstart-btn caps"
+                   name=" Agregar Síntoma "
+                   value="  Agregar Síntoma ">
 
 
-                <input type="submit"
-                  class="ampstart-btn caps"
-                  name=" Agregar Síntoma "
-                  value="  Agregar Síntoma ">
-
-
-		<div class="items-center flex">
+		 <div class="items-center flex">
                   <!--
 		  <label for="color">Síntoma</label>
                   -->
@@ -2223,12 +2222,12 @@
 
 		      <li>
 			<div option="blue"
+                          selected
 			  class="square blue"></div>
 		      </li>
 
 		      <li>
 			<div option="green"
-			  selected
 			  class="square green"></div>
 		      </li>
 		      <li>
@@ -2247,8 +2246,8 @@
 		  </amp-selector>
 		</div>
 
+                <label for="quantity">Duración:</label>
 		<div class="items-center flex">
-		  <label for="quantity">Duración:</label>
 		  <amp-selector name="quantity"
 		    layout="container">
 		    <ul class="p0 m1">
@@ -2258,7 +2257,6 @@
 		      <li option="3">3</li>
 		    </ul>
 		  </amp-selector>
-                  <label for="quantity">días</label>
 		</div>
               </div>
 
@@ -2872,7 +2870,6 @@
 	class = "my2"
         amp-access-hide = "" >
 
-
 	  <amp-list
 	    hidden
 	    template    = "ocupacion-list-template"
@@ -2902,9 +2899,6 @@
 		</h3>
 		{{#items}}
 		  <div class = "xs-hide flex justify-between">
-                    
-                    
-
 
 		    <h3>
 		       {{tipo_circuito.letras}}-{{nombre}}
@@ -2951,7 +2945,7 @@
 		  </div>
 		{{/items}}
 		{{^items}}
-		  No se han ingresado electrodomésticos, intente con el botón AGREGAR.
+		  No se han síntomas, intente con el botón AGREGAR.
                   - Si realizó una importación desde otro dispositivo, pruebe a refrescar la página.
 		{{/items}}
 	      </div>

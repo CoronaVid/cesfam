@@ -1943,6 +1943,7 @@
 		    "selectedSlideForRed": 0,
 		    "selectedSlideForGolden": 0,
 		    "selectedSlideForGreen": 0,
+                    "selectedCargaQty": 1,
 		    "moreItemsPageIndex": 0,
 		    "hasMorePages": false,
 		      "circuitos": {
@@ -2254,7 +2255,10 @@
                 <label for="quantity">Días de Duración:</label>
 		<div class="items-center flex">
 		  <amp-selector name="quantity"
-		    layout="container">
+		    layout="container"
+                    on="select:AMP.setState({ product: { selectedCargaQty: event.targetOption}})"
+                    [selected]="1">
+
 		    <ul class="p0 m1">
 		      <li option="1"
 			selected>1</li>
@@ -2432,29 +2436,34 @@
 	      value="  Agregar  ">
 	  </div>
           -->
-	  <input type="hidden"
-	    name="carga_id"
-	    value = "844"
-	    [value] ="product[product.selectedColor].ids[product.selectedSlide]">
+	  <input type = "hidden"
+	    name      = "carga_id"
+	    value     = "844"
+	    [value]   = "product[product.selectedColor].ids[product.selectedSlide]">
 
-          <input type="hidden"
-            name="circuito"
-            value = "I"
-            [value] ="product.selectedPotencia">
+          <input type = "hidden"
+            name      = "carga_qty"
+            value     = "1"
+            [value]   = "product.selectedCargaQty">
 
-	  <input name="clientId"
-	    type="hidden"
-	    value="CLIENT_ID(uid)"
+          <input type = "hidden"
+            name      = "circuito"
+            value     = "I"
+            [value]   = "product.selectedPotencia">
+
+	  <input name = "clientId"
+	    type      = "hidden"
+	    value     = "CLIENT_ID(uid)"
 	    data-amp-replace="CLIENT_ID">
 
-          <input name="auth_token"
-            type="hidden"
-            value="AUTHDATA(auth_token)"
+          <input name = "auth_token"
+            type      = "hidden"
+            value     = "AUTHDATA(auth_token)"
             data-amp-replace="AUTHDATA">
 
           <input name = "macarron_de_autorizacion" 
-            type = "hidden" 
-            value = "AUTHDATA(macarron_de_autorizacion)" 
+            type      = "hidden" 
+            value     = "AUTHDATA(macarron_de_autorizacion)" 
             data-amp-replace = "AUTHDATA">
 
 	  <div submit-success>

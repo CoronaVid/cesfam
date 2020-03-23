@@ -2494,6 +2494,10 @@
         src="https://cornavi.herokuapp.com/todos/1/items/?auth_token=AUTHDATA(auth_token)"  
 	-->
 	<section>
+            <div>
+              <label for="items">Derivación a UCI:</label>
+            </div>
+
 	  <amp-list
 	    template = "items-list-template"
 	    credentials = "omit"
@@ -2505,9 +2509,6 @@
 	    layout="fixed-height"
             src="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/get.json?auth_token=AUTHDATA(auth_token)&macarron_de_autorizacion=AUTHDATA(macarron_de_autorizacion)"  
 	    id="items-list" >
-	    <div>
-              <label for="items">Derivación a UCI:</label>
-	    </div>
 	    <div overflow
 	      class = "list-overflow">
 	      VER MAS

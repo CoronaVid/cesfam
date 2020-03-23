@@ -2494,9 +2494,10 @@
         src="https://cornavi.herokuapp.com/todos/1/items/?auth_token=AUTHDATA(auth_token)"  
 	-->
 	<section>
-            <div>
-              <label for="items">Derivación a UCI:</label>
-            </div>
+          <div>
+           <p class="price-description"> Cargas
+             <span [text]="product.selectedCargas">Cargas.</span> </p>
+          </div>
 
 	  <amp-list
 	    template = "items-list-template"

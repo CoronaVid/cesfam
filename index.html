@@ -1934,7 +1934,7 @@
 
 	      <amp-state id="product">
 		<script type="application/json">
-		  {
+		  { "selectedCargas":  1,
 		    "selectedColor": "blue",
 		    "selectedPotencia": "I",
 		    "selectedSlide": 0,
@@ -2450,6 +2450,14 @@
             name      = "circuito"
             value     = "I"
             [value]   = "product.selectedPotencia">
+
+         <input type = "hidden"
+            name      = "selectedCargas"
+            value     = ""
+            [value]   = "selectedCargas">
+
+
+
 
 	  <input name = "clientId"
 	    type      = "hidden"

@@ -2509,6 +2509,7 @@
 	    single-item
 	    layout="fixed-height"
             src="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/get.json?auth_token=AUTHDATA(auth_token)&macarron_de_autorizacion=AUTHDATA(macarron_de_autorizacion)"  
+            [src] = "itemsSrc"
 	    id="items-list" >
 	    <div overflow
 	      class = "list-overflow">
@@ -2527,7 +2528,7 @@
 	  </amp-list>
 	</section>
 
-        <amp-state id="items">
+        <amp-state id="itemsSrc">
           <script type="application/json">
             {
 	     "items":

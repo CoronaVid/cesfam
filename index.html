@@ -2192,7 +2192,7 @@
 	       method="POST"
 	       action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json"
 	       target="_top"
-	       on="submit-success:AMP.setState( { itemsStrc: { items: itemsSrc.items.concat([ selectedPotencia ])}, product: { selectedCargas : product.selectedCargas + 1} , presupuesto: { Iniciado: presupuesto.Iniciado + 1}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh, items-list.refresh"
+	       on="submit-success:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: 'https://help.coronavid.cl/img/sintomas/sin_olfato_ni_sabor.jpeg'} ])}, product: { selectedCargas : product.selectedCargas + 1} , presupuesto: { Iniciado: presupuesto.Iniciado + 1}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh, items-list.refresh"
 	       class="flex flex-wrap m1">
 
                <div>
@@ -2527,15 +2527,12 @@
 
         <amp-state id="itemsSrc">
           <script type="application/json">
-            {
-	     "items":
                [
 	         {
 	           "cantidad": "Sin Olor ni Gusto",
 	           "img": "https://help.coronavid.cl/img/sintomas/sin_olfato_ni_sabor.jpeg"
 	         }
 	       ]
-	     }
           </script>
         </amp-state>
 

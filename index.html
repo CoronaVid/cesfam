@@ -2106,7 +2106,7 @@
 
               <div class="my2">
                 <button 
-                  on="tap:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
+                  on="tap:AMP.setState( { selectedCargas: selectedCargas + 1, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
                   class="ampstart-btn ampstart-btn-secondary ml1 caps">Agrega
                 </button>
              </div>
@@ -2127,7 +2127,7 @@
           <amp-list
             class="mt3"
             layout="fixed-height"
-            height=0
+            height= 1
             items = "."
             binding="no"
             [src] = "itemsSrc"

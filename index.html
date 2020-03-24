@@ -2103,6 +2103,16 @@
 		  }
 		</script>
 	      </amp-state>
+
+              <div class="my2">
+                <button 
+                  on="tap:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
+                  class="ampstart-btn ampstart-btn-secondary ml1 caps">Agrega
+                </button>
+             </div>
+
+
+
               <p class="price-description"> Síntomas Agregados
                 <span [text]="product.selectedCargas">...</span> </p>
 
@@ -2163,13 +2173,6 @@
             </div>
           </amp-list>
         </section>
-
-	      <div class="my2">
-		<button 
-		  on="tap:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
-		  class="ampstart-btn ampstart-btn-secondary ml1 caps">Agrega 
-		</button>
-	     </div>
 
 	     <form id="order"
 	       method="POST"

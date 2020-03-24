@@ -2507,7 +2507,27 @@
             [src] = "itemsSrc"
             id="item-list" >
             <template type="amp-mustache">
-             Item: {{img}}
+              <amp-img width="100"
+                tabindex = 0
+                height="90"
+                layout="fixed"
+                aria-describedby = "caption"
+                alt="{{cantidad}}"
+                src="{{img}}">
+
+                <form method   = "POST"
+                   class = "close-gallery-button"
+                    action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
+                    target    = "_top"
+                    on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
+
+                   <input name = "clientId" 
+                       type = "hidden" 
+                       value = "CLIENT_ID(uid)" 
+                       data-amp-replace = "CLIENT_ID">
+                       <button  type = "submit" >X</button>
+                </form>
+              </amp-img>
             </template>
           </amp-list>
         </section>

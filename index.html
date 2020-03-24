@@ -2178,7 +2178,7 @@
               <p class="price-description"> Cargas
                 <span [text]="product.selectedCargas">Cargas.</span> </p>
               <p class="price-description"> Items
-                <span [text]="itemsSrc.items.concat">...</span> </p>
+                <span [text]="itemsSrc.first">...</span> </p>
 
 
 	      <p class="price-description"> Seleccionado:
@@ -2192,7 +2192,7 @@
 	       method="POST"
 	       action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json"
 	       target="_top"
-	       on="submit-success:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: 'https://help.coronavid.cl/img/sintomas/sin_olfato_ni_sabor.jpeg'} ])}, product: { selectedCargas : product.selectedCargas + 1} , presupuesto: { Iniciado: presupuesto.Iniciado + 1}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh, items-list.refresh"
+	       on="submit-success:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: 'https://help.coronavid.cl/img/sintomas/sin_olfato_ni_sabor.jpeg'} ]), product: { selectedCargas : product.selectedCargas + 1} , presupuesto: { Iniciado: presupuesto.Iniciado + 1}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh, items-list.refresh"
 	       class="flex flex-wrap m1">
 
                <div>

@@ -935,7 +935,7 @@
 	  Ver Video 
 	</button>
         -->
-     <section amp-access="loggedIn">
+     <section>
 
 	<amp-lightbox id="watch-video-lightbox" 
 	  layout="nodisplay">
@@ -2113,10 +2113,44 @@
                 on = "submit-success:carrusel-list.refresh,cart-list.refresh;submit-error:carrusel-list.refresh,cart-list.refresh,carrusel-list.show,boton-login.show"
 
 	      -->
+      <section>
+          <amp-list
+            class="mt3"
+            layout="fixed-height"
+            height=0
+            items = "."
+            binding="no"
+            [src] = "itemsSrc"
+            id="item-list" >
+            <template type="amp-mustache">
+              <amp-img width="100"
+                tabindex = 0
+                height="90"
+                layout="fixed"
+                aria-describedby = "caption"
+                alt="{{cantidad}}"
+                src="{{img}}">
+
+                <form method   = "POST"
+                   class = "close-gallery-button"
+                    action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
+                    target    = "_top"
+                    on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
+
+                   <input name = "clientId" 
+                       type = "hidden" 
+                       value = "CLIENT_ID(uid)" 
+                       data-amp-replace = "CLIENT_ID">
+                       <button  type = "submit" >X</button>
+                </form>
+              </amp-img>
+            </template>
+          </amp-list>
+        </section>
 
 	      <div class="my2">
 		<button 
-		  on="submit:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ) "
+		  on="submit:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
 		  class="ampstart-btn ampstart-btn-secondary ml1 caps">Agrega 
 		</button>
 	     </div>
@@ -2125,7 +2159,7 @@
 	       method="POST"
 	       action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json"
 	       target="_top"
-	       on="submit-success:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]), presupuesto: { Iniciado: presupuesto.Iniciado + 1}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh, item-list.refresh"
+	       on="submit-success:AMP.setState( { itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]), presupuesto: { Iniciado: presupuesto.Iniciado + 1}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh, items-list.refresh"
 	       class="flex flex-wrap m1">
 
                <div>
@@ -2428,41 +2462,6 @@
 	checkout-section
         src="https://cornavi.herokuapp.com/todos/1/items/?auth_token=AUTHDATA(auth_token)"  
 	-->
-
-      <section>
-          <amp-list
-            class="mt3"
-            layout="fixed-height"
-            height=0
-            items = "."
-            binding="no"
-            [src] = "itemsSrc"
-            id="item-list" >
-            <template type="amp-mustache">
-              <amp-img width="100"
-                tabindex = 0
-                height="90"
-                layout="fixed"
-                aria-describedby = "caption"
-                alt="{{cantidad}}"
-                src="{{img}}">
-
-                <form method   = "POST"
-                   class = "close-gallery-button"
-                    action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
-                    target    = "_top"
-                    on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
-
-                   <input name = "clientId" 
-                       type = "hidden" 
-                       value = "CLIENT_ID(uid)" 
-                       data-amp-replace = "CLIENT_ID">
-                       <button  type = "submit" >X</button>
-                </form>
-              </amp-img>
-            </template>
-          </amp-list>
-        </section>
 
 	<section>
 	  <amp-list

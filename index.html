@@ -2106,7 +2106,7 @@
 
               <div class="my2">
                 <button 
-                  on="tap:AMP.setState( { selectedCargas: selectedCargas + 1, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
+                  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
                   class="ampstart-btn ampstart-btn-secondary ml1 caps">Agrega
                 </button>
              </div>
@@ -2514,10 +2514,6 @@
         <amp-state id="itemsSrc">
           <script type="application/json">
                [
-	         {
-	           "cantidad": "Sin Olor ni Gusto",
-	           "img": "https://help.coronavid.cl/img/sintomas/sin_olfato_ni_sabor.jpeg"
-	         }
 	       ]
           </script>
         </amp-state>

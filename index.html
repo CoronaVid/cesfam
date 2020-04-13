@@ -2463,14 +2463,14 @@
           <div>
             <section amp-access="loggedIn">
               <template amp-access-template type="amp-mustache">
-                {{token}}
-                {{macarron_de_autorizacion}}
-
-          <input name = "macarron_de_autorizacion" 
-            type      = "text" 
-            value     = {{macarron_de_autorizacion}}
-            data-amp-replace ="AUTHDATA">
-
+                <input name = "token" 
+                  type      = "text" 
+                  value     =  {{token}}
+                  data-amp-replace ="AUTHDATA">
+                <input name = "macarron_de_autorizacion" 
+                  type      = "text" 
+                  value     = {{macarron_de_autorizacion}}
+                  data-amp-replace ="AUTHDATA">
               </template>
             </section>
           </div>

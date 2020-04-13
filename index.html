@@ -2456,14 +2456,10 @@
 	    value     = "CLIENT_ID(uid)"
 	    data-amp-replace="CLIENT_ID">
 
-          <input name = "macarron_de_autorizacion" 
-            type      = "hidden" 
-            value     = "AUTHDATA(macarron_de_autorizacion)" 
-            data-amp-replace ="AUTHDATA">
-
           <input name = "token" 
             type      = "hidden" 
-            value     = "AUTHDATA(token)" 
+            value     = ""
+            [value]   = "AUTHDATA(token)" 
             data-amp-replace ="AUTHDATA">
 
 

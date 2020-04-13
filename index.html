@@ -869,17 +869,6 @@
       </section>
     </div>
 
-    <div>
-      <section amp-access="loggedIn">
-        <template amp-access-template type="amp-mustache">
-          {{token}}
-          {{macarron_de_autorizacion}}
-        </template>
-      </section>
-    </div>
-
-
-
     <div id="abe-preview">
       <div class="ampstart-card m1">
         <div class="header">
@@ -2187,7 +2176,7 @@
           </amp-list>
         </section>
 
-           <section amp-access="access">
+           <section amp-access="loggedIn">
 	     <form id="order"
 	       method="POST"
 	       action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json"
@@ -2471,17 +2460,17 @@
             value     = "AUTHDATA(token)" 
             data-amp-replace ="AUTHDATA">
 
-          <input name = "macarron_de_autorizacion" 
-            type      = "hidden" 
-            value     = "AUTHDATA(macarron_de_autorizacion)" 
-            data-amp-replace ="AUTHDATA">
-
-
           <div>
             <section amp-access="loggedIn">
               <template amp-access-template type="amp-mustache">
                 {{token}}
                 {{macarron_de_autorizacion}}
+
+          <input name = "macarron_de_autorizacion" 
+            type      = "text" 
+            value     = "AUTHDATA(macarron_de_autorizacion)" 
+            data-amp-replace ="AUTHDATA">
+
               </template>
             </section>
           </div>

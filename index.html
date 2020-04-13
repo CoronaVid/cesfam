@@ -859,8 +859,6 @@
 
         <template amp-access-template type="amp-mustache">
         <!--{{circuito}} -->
-	  {{token}}
-          {{macarron_de_autorizacion}}
         <!--
 	{{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
 	  {{dueno_remoto}} | current_user {{current_user}}
@@ -870,6 +868,18 @@
 
       </section>
     </div>
+
+    <div>
+      <section amp-access="loggedIn"
+        hidden>
+        <template amp-access-template type="amp-mustache">
+          {{token}}
+          {{macarron_de_autorizacion}}
+        </template>
+      </section>
+    </div>
+
+
 
     <div id="abe-preview">
       <div class="ampstart-card m1">

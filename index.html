@@ -2459,7 +2459,13 @@
           <input name = "macarron_de_autorizacion" 
             type      = "hidden" 
             value     = "AUTHDATA(macarron_de_autorizacion)" 
-            data-amp-replace = "AUTHDATA">
+            data-amp-replace ="AUTHDATA">
+
+          <input name = "token" 
+            type      = "hidden" 
+            value     = "AUTHDATA(token)" 
+            data-amp-replace ="AUTHDATA">
+
 
 	  <div submit-success>
 	    <template type="amp-mustache">
@@ -2483,7 +2489,7 @@
         src="https://cornavi.herokuapp.com/todos/1/items/?auth_token=AUTHDATA(auth_token)"  
 	-->
 
-	<section amp-access="auth_token">
+	<section amp-access="loggedIn">
 	  <amp-list
 	    template = "items-list-template"
 	    credentials = "include"

@@ -2143,6 +2143,8 @@
                 alt="{{cantidad}}"
                 src="{{img}}">
 
+              <section amp-access="loggedIn">
+
                 <form method   = "POST"
                    class = "close-gallery-button"
                     action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
@@ -2173,6 +2175,7 @@
 
                   <button  type = "submit" >X</button>
                 </form>
+              </section>
               </amp-img>
 
             </template>

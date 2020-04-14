@@ -2153,7 +2153,25 @@
                        type = "hidden" 
                        value = "CLIENT_ID(uid)" 
                        data-amp-replace = "CLIENT_ID">
-                       <button  type = "submit" >X</button>
+
+                    <template amp-access-template type="amp-mustache">
+                      <input name = "clientId"
+                        type      = "hidden"
+                        value     = "CLIENT_ID(uid)"
+                        data-amp-replace="CLIENT_ID">
+
+                      <input name = "auth_token" 
+                        type      = "text" 
+                        value     =  {{auth_token}}
+                        data-amp-replace ="AUTHDATA">
+
+                      <input name = "macarron_de_autorizacion" 
+                        type      = "text" 
+                        value     = {{macarron_de_autorizacion}}
+                        data-amp-replace ="AUTHDATA">
+                    </template>
+
+                  <button  type = "submit" >X</button>
                 </form>
               </amp-img>
 

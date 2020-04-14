@@ -2553,20 +2553,25 @@
                   target    = "_top"
                   on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
 
-                  <input name = "clientId" 
-                    type = "hidden" 
-                    value = "CLIENT_ID(uid)" 
-                    data-amp-replace = "CLIENT_ID">
+                    <template amp-access-template type="amp-mustache">
+                      <input name = "clientId"
+                        type      = "hidden"
+                        value     = "CLIENT_ID(uid)"
+                        data-amp-replace="CLIENT_ID">
 
-                  <input name = "reader_token" 
-                    type = "hidden" 
-                    value = "AUTHDATA(auth_token)" 
-                    data-amp-replace = "AUTHDATA">
+                      <input name = "auth_token" 
+                        type      = "text" 
+                        value     =  {{auth_token}}
+                        data-amp-replace ="AUTHDATA">
 
-                  <input name = "macarron_de_autorizacion" 
-                    type = "hidden" 
-                    value = "AUTHDATA(macarron_de_autorizacion)" 
-                    data-amp-replace = "AUTHDATA">
+                      <input name = "macarron_de_autorizacion" 
+                        type      = "text" 
+                        value     = {{macarron_de_autorizacion}}
+                        data-amp-replace ="AUTHDATA">
+                    </template>
+
+
+
 
                   <button  type = "submit" >X</button>
                 </form>

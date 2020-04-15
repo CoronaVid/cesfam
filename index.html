@@ -2132,7 +2132,7 @@
             binding="no"
             [src] = "itemsSrc"
             id="item-list" >
-            <template type="amp-mustache">
+            <template amp-access-template type="amp-mustache">
               <amp-img width="100"
                 tabindex = 0
                 height="90"
@@ -2149,7 +2149,6 @@
                     target    = "_top"
                     on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
 
-                    <template amp-access-template type="amp-mustache">
                       <input name = "clientId"
                         type      = "hidden"
                         value     = "CLIENT_ID(uid)"
@@ -2164,7 +2163,6 @@
                         type      = "text" 
                         value     = {{macarron_de_autorizacion}}
                         data-amp-replace ="AUTHDATA">
-                    </template>
 
                   <button  type = "submit" >X</button>
                 </form>

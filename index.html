@@ -2540,7 +2540,7 @@
           </script>
         </amp-state>
 
-	<template amp-access-template
+	<template 
 	  type = "amp-mustache"
 	  id = "items-list-template" >
 	   {{^items}}
@@ -2559,17 +2559,21 @@
         <section amp-access="loggedIn">
        -->
 
+
                 <form method   = "POST"
                   class = "close-gallery-button"
                   action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
                   target    = "_top"
                   on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
 
+
+
                       <input name = "clientId"
                         type      = "hidden"
                         value     = "CLIENT_ID(uid)"
                         data-amp-replace="CLIENT_ID">
 
+            <template amp-access-template type="amp-mustache">
                       <input name = "auth_token" 
                         type      = "text" 
                         value     =  {{auth_token}}
@@ -2579,7 +2583,7 @@
                         type      = "text" 
                         value     = AUTHDATA(macarron_de_autorizacion)
                         data-amp-replace ="AUTHDATA">
-
+             </template>
 
                   <button  type = "submit" >X</button>
                 </form>

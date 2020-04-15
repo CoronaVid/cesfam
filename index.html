@@ -2106,7 +2106,7 @@
 
               <div class="my2">
                 <button 
-                  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
+                  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { id: product[product.selectedColor].ids[product.selectedSlide]}, img: product[product.selectedColor].imagenes[product.selectedSlide]}]) } ),item-list.refresh "
                   class="ampstart-btn ampstart-btn-secondary ml1 caps">Agrega
                 </button>
              </div>
